@@ -5,9 +5,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by Paul-HP on 3/4/2017.
- */
+
 public class FileParser {
 	private String fileName;
 	private int[][] grid;
@@ -49,6 +47,7 @@ public class FileParser {
 			System.out.println(sb.toString());
 		}
 	}
+
 
 	public int[][] getGrid() {
 		return grid;
