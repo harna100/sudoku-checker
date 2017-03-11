@@ -15,24 +15,17 @@ public class FileParser {
 		grid = new int[9][9];
 	}
 
-	public void parseFile(){
-		try {
-			FileReader fr = new FileReader(fileName);
-			BufferedReader br = new BufferedReader(fr);
-			String currLine;
-			int currPos = 0;
-			while((currLine = br.readLine()) != null){
-				String[] vals = currLine.trim().split(",");
-				for (int i = 0; i < 9; ++i) {
-					grid[currPos][i] = Integer.parseInt(vals[i]);
-				}
-				++currPos;
+	public void parseFile() throws FileNotFoundException, IOException {
+		FileReader fr = new FileReader(fileName);
+		BufferedReader br = new BufferedReader(fr);
+		String currLine;
+		int currPos = 0;
+		while((currLine = br.readLine()) != null){
+			String[] vals = currLine.trim().split(",");
+			for (int i = 0; i < 9; ++i) {
+				grid[currPos][i] = Integer.parseInt(vals[i]);
 			}
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		catch (IOException e){
-			e.printStackTrace();
+			++currPos;
 		}
 	}
 

@@ -72,11 +72,6 @@ public class Checker{
 			e.printStackTrace();
 		}
 
-
-		System.out.println("subErrors = " + subErrors);
-		System.out.println("rowErrors = " + rowErrors);
-		System.out.println("colErrors = " + colErrors);
-
 		if(subErrors.isEmpty() && rowErrors.isEmpty() && colErrors.isEmpty())
 			return true;
 
@@ -121,11 +116,6 @@ public class Checker{
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-
-
-		System.out.println("colMissing = " + colMissing);
-		System.out.println("rowMissing = " + rowMissing);
-		System.out.println("subMissing = " + subMissing);
 		return false;
 	}
 
@@ -153,28 +143,6 @@ public class Checker{
 				toModify[row][col] = newVal;
 			}
 		}
-
-		/*while(rowMissing.keySet().iterator().hasNext()){
-			int row = rowMissing.keySet().iterator().next();
-			while(colMissing.keySet().iterator().hasNext()){
-				int col = colMissing.keySet().iterator().next();
-				if(checkCell(col,row) != 3){
-					continue;
-				}
-				System.out.println("Error at Column " + (col+1) + " Row " + (row+1) + ".");
-				Set<Integer> currColMissing = colMissing.get(col);
-				Set<Integer> currRowMissing = rowMissing.get(row);
-				Set<Integer> intersection = new HashSet<>(currRowMissing);
-				intersection.retainAll(currColMissing);
-				int newVal = intersection.iterator().next();
-				System.out.println("Current Value: " + grid[row][col] + " Recommended: " +  newVal);
-				toModify[row][col] = newVal;
-			}
-		}*/
-//		System.out.println("Error at Column " + (col+1) + " Row " + (row+1) + ".");
-//		System.out.println("Current Value: " + grid[row][col] + " Recommended: " +  colMissing.get(col).iterator().next());
-
-//		toModify[row][col] = colMissing.get(col).iterator().next();
 		System.out.println("New Board: ");
 		Utils.PrintBoard(toModify);
 	}
