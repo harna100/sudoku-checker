@@ -36,17 +36,6 @@ public class FileParser {
 		}
 	}
 
-	public void printBoard(){
-		for (int[] ints : grid) {
-			StringBuilder sb = new StringBuilder();
-			for (int anInt : ints) {
-				sb.append(anInt);
-				sb.append(",");
-			}
-			sb.setLength(sb.length()-1);
-			System.out.println(sb.toString());
-		}
-	}
 
 
 	public int[][] getGrid() {
