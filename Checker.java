@@ -125,9 +125,6 @@ public class Checker{
 			toModify[i] = grid[i].clone();
 		}
 
-//		int row = rowMissing.keySet().iterator().next();
-//		int col = colMissing.keySet().iterator().next();
-
 		for (Integer row : rowMissing.keySet()) {
 			for (Integer col : colMissing.keySet()) {
 				if(checkCell(col,row) != 3){

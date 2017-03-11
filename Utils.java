@@ -1,9 +1,4 @@
-/**
- * Created by Paul-HP on 3/9/2017.
- */
 public class Utils {
-
-
 	public static void PrintBoard(int[][] grid){
 		for (int[] ints : grid) {
 			StringBuilder sb = new StringBuilder();

@@ -13,6 +13,7 @@ public class Main {
 			System.out.println("Error reading file. Aborting.");
 			System.exit(1);
 		}
+		System.out.println("Inputted board:");
 		Utils.PrintBoard(fp.getGrid());
 
 		int[][] grid = fp.getGrid();
